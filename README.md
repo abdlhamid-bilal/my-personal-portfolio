@@ -1,3 +1,3 @@
 My personal portfolio. Nothing more nothing less.
 
-Visit it here: [portfolio.abdlhamid-bilal.de](portfolio.abdlhamid-bilal.de)
+Visit it here: https://portfolio.abdlhamid-bilal.de
