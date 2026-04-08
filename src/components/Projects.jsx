@@ -124,7 +124,7 @@ function Projects() {
             tech: ["Python"]
         },
         "my-personal-portfolio": {
-            link: "https://portfolio.abdlhamid-bilal.de/",
+            link: "https://github.com/Orivex/my-personal-portfolio",
             description: "My personal portfolio. Nothing more and nothing else.",
             purpose: "Get some more shells for Summer of Making. I didn't have a portfolio. So, why not?",
             tech: ["HTML5", "CSS3", "JavaScript", "React", "ViteJs"]
