@@ -76,11 +76,14 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) !important; /* Overriding motion if it interferes initially */
+    transform: translate(-50%, -50%); /* Overriding motion if it interferes initially */
     z-index: 2000;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     word-break: break-word;
     text-align: left;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .projectPreview h2 {

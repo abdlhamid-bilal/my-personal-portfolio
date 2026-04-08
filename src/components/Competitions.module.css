@@ -1,0 +1,213 @@
+.container {
+    padding: 2rem;
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--border-color, #444);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timelineItem {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timelineItem:nth-child(odd) {
+    left: 0;
+}
+
+.timelineItem:nth-child(even) {
+    left: 50%;
+}
+
+.timelineItem::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: var(--text-color, #fff);
+    border: 4px solid var(--accent-color, #f0f0f0);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timelineItem:nth-child(even)::after {
+    left: -10px;
+}
+
+.timelineYear {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--text-color, #fff);
+    text-align: right;
+}
+
+.timelineItem:nth-child(even) .timelineYear {
+    text-align: left;
+}
+
+.timelineContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.timelineItem:nth-child(even) .timelineContent {
+    justify-content: flex-start;
+}
+
+.projectContainer {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color, #333);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: var(--text-color, #fff);
+    font-weight: 500;
+    width: 140px;
+    min-height: 80px;
+}
+
+.projectContainer img {
+    max-width: 60px;
+    max-height: 60px;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+.projectContainer p {
+    margin: 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.projectPreview {
+    background: rgba(19, 19, 26, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid var(--border-color, #333);
+    width: 90%;
+    max-width: 500px;
+    padding: 2rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    word-break: break-word;
+    text-align: left;
+    color: var(--text-color, #fff);
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.projectPreview h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--text-primary, #fff);
+    border-bottom: 1px solid var(--border-color, #333);
+    padding-bottom: 1rem;
+}
+
+.projectPreview h3 {
+    font-size: 1.2rem;
+    color: var(--accent, #ccc);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.closePreviewBtn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary, #999);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.closePreviewBtn:hover {
+    color: white;
+}
+
+.viewProjectBtn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--accent, #666);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.viewProjectBtn:hover {
+    background: var(--accent-hover, #777);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--accent-glow, rgba(255,255,255,0.2));
+}
+
+@media screen and (max-width: 600px) {
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timelineItem {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timelineItem:nth-child(even) {
+        left: 0%;
+    }
+    
+    .timelineItem::after {
+        left: 21px;
+    }
+    
+    .timelineItem:nth-child(even)::after {
+        left: 21px;
+    }
+    
+    .timelineYear, .timelineItem:nth-child(even) .timelineYear {
+        text-align: left;
+    }
+    
+    .timelineContent, .timelineItem:nth-child(even) .timelineContent {
+        justify-content: flex-start;
+    }
+}

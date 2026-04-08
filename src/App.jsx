@@ -4,6 +4,7 @@ import MainButton from './components/MainButton'
 import { motion, AnimatePresence } from 'motion/react';
 import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
+import Competitions from './components/Competitions';
 import TypeWriter from 'typewriter-effect'
 import Contact from './components/Contact';
 
@@ -23,7 +24,7 @@ const songPaths = [
   "/assets/sounds/songs/song13.mp3",
 ];
 
-let clickAudio = new Audio("/assets/sounds/click.mp3");
+
 let songAudio = new Audio();
 let currentSong = -1;
 
@@ -31,10 +32,9 @@ function App() {
   const [isMusic, setIsMusic] = useState(false);
 
   // Edit this to change what you are currently doing
-  const CURRENT_STATUS = "Building n8n workflows 🚀";
+  const CURRENT_STATUS = "Studying 📖";
 
   const toggleMusic = () => {
-    clickAudio.play();
     if (isMusic) {
       setIsMusic(false);
       songAudio.pause();
@@ -48,7 +48,6 @@ function App() {
   }
 
   const changeMusic = () => {
-    clickAudio.play();
     songAudio.pause();
     songAudio.currentTime = 0;
     let r = Math.floor(Math.random() * songPaths.length);
@@ -64,7 +63,6 @@ function App() {
   }
 
   const scrollToSection = (id) => {
-    clickAudio.play();
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -75,6 +73,7 @@ function App() {
     <>
       <nav className='navbar'>
         <MainButton label={"Home"} onClick={() => scrollToSection('home')} />
+        <MainButton label={"Competitions"} onClick={() => scrollToSection('competitions')} />
         <MainButton label={"Projects"} onClick={() => scrollToSection('projects')} />
         <MainButton label={"Contact"} onClick={() => scrollToSection('contact')} />
       </nav>
@@ -126,6 +125,10 @@ function App() {
         >
           <AboutMe />
         </motion.div>
+      </section>
+
+      <section id="competitions" className='section'>
+        <Competitions />
       </section>
 
       <section id="projects" className='section'>
