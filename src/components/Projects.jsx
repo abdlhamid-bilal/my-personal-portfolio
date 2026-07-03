@@ -23,7 +23,7 @@ function Projects() {
 
     const projectsData = {
         "Hype": {
-            link: "https://github.com/Orivex/Hype",
+            link: "https://github.com/abdlhamid-bilal/Hype",
             imgPath: "/assets/hype.png",
             description: "Post polls and the hype.",
             purpose: "I wanted to make a real-world full-stack application. Backend, frontend and database.",
@@ -38,7 +38,7 @@ function Projects() {
         },
         "ExamAI": {
             link: "https://exam-ai-2026.base44.app/",
-            //imgPath: "/assets/examai.png",
+            imgPath: "/assets/ExamAI.png",
             description: "Upload study material and exams to generate new exams that fit your needs. You can also correct exams and generate flashcards. Everything based on you personal knowledge base!",
             purpose: "Practicing with past exams is the best exam preparation. But sometimes, you can't get enough of them...",
             tech: ["Base44"]
@@ -51,7 +51,7 @@ function Projects() {
             tech: ["HTML5", "CSS3", "JavaScript", "Phaser"]
         },
         "Quotator": {
-            link: "https://github.com/Orivex/Quotator",
+            link: "https://github.com/abdlhamid-bilal/Quotator",
             imgPath: "/assets/quotator.png",
             description: "Save and manage your favourite quotes, so you never forget them.",
             purpose: "Learn React Native to develop android app. A great starter for my 'Hype' app.",
@@ -100,31 +100,31 @@ function Projects() {
             tech: ["Unity", "C#", "Krita"]
         },
         "Machine Learning": {
-            link: "https://github.com/Orivex/Machine-Learning",
+            link: "https://github.com/abdlhamid-bilal/Machine-Learning",
             description: "I started learning core concepts of Machine Learning at the begining of 2025. It's actually very interesting.",
             purpose: "Learn something new",
             tech: ["Python", "Pandas", "NumPy", "TensorFlow", "PyTorch", "Matplotlib", "scikit-learn"]
         },
         "Algorithms and Datastructures": {
-            link: "https://github.com/Orivex/Algorithms-And-Datastructures",
+            link: "https://github.com/abdlhamid-bilal/Algorithms-And-Datastructures",
             description: "I learned about maaany concepts. Graph theory, Dynamic programming, Greedy algorithms, ....",
             purpose: "Prepare myself for the German CS-competition BWINF (Topic: Theoretical CS / Algorithms and Datastructures).",
             tech: ["Java", "C++"]
         },
-        "Competetive Programming": {
-            link: "https://github.com/Orivex/CompetetiveProgramming",
+        "Competitive Programming": {
+            link: "https://github.com/abdlhamid-bilal/CompetitiveProgramming",
             description: "Grinding CP problems on CSES and USACO Guide",
             purpose: "Prepare myself for the German CS-competition BWINF (Topic: Theoretical CS / Algorithms and Datastructures).",
             tech: ["Java", "C++"]
         },
         "TextCompleter": {
-            link: "https://github.com/Orivex/TextCompleter",
+            link: "https://github.com/abdlhamid-bilal/TextCompleter",
             description: "Autocomplete repetitive texts like emails, names and addresses",
             purpose: "Project for Summer of Making. Also solving my own annoying problem.",
             tech: ["Python"]
         },
         "my-personal-portfolio": {
-            link: "https://github.com/Orivex/my-personal-portfolio",
+            link: "https://github.com/abdlhamid-bilal/my-personal-portfolio",
             description: "My personal portfolio. Nothing more and nothing else.",
             purpose: "Get some more shells for Summer of Making. I didn't have a portfolio. So, why not?",
             tech: ["HTML5", "CSS3", "JavaScript", "React", "ViteJs"]
@@ -144,25 +144,13 @@ function Projects() {
 
                 <div style={{ textAlign: 'left', flex: 1, overflowY: 'auto', paddingRight: '5px' }}>
                     <h3>Description</h3>
-                    <TypeWriter
-                        options={{
-                            strings: project.description,
-                            autoStart: true,
-                            loop: false,
-                            delay: 20,
-                            cursor: ""
-                        }}
-                    />
+                    <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+                        {project.description}
+                    </motion.p>
                     <h3>Why?</h3>
-                    <TypeWriter
-                        options={{
-                            strings: project.purpose,
-                            autoStart: true,
-                            loop: false,
-                            delay: 20,
-                            cursor: ""
-                        }}
-                    />
+                    <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+                        {project.purpose}
+                    </motion.p>
                     <h3>Tech stack</h3>
                     <ul style={{ marginTop: '10px', marginBottom: '1.5rem', paddingLeft: '20px' }}>
                         {project.tech.map((techItem, idx) => (
@@ -237,7 +225,7 @@ function Projects() {
                 <div className={styles.projectsContainer} >
                     {buttonComponent("Machine Learning")}
                     {buttonComponent("Algorithms and Datastructures")}
-                    {buttonComponent("Competetive Programming")}
+                    {buttonComponent("Competitive Programming")}
                 </div>
 
                 <h3>Games</h3>

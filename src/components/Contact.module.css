@@ -26,16 +26,16 @@
 }
 
 .contactButton:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .contactButton img {
     max-width: 60%;
     max-height: 60%;
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
     transition: filter 0.3s ease;
 }
 
 .contactButton:hover img {
-    filter: drop-shadow(0 0 15px rgba(255,255,255,0.4));
+    filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.4));
 }
