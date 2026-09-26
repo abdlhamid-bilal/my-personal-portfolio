@@ -14,7 +14,7 @@ function AboutMe() {
             </p>
             <h3>Interests</h3>
             <p>
-                Computer Vision, Data Science, Machine Learning and theoretical computer science.
+                Computer Vision, Robotics, Low-Level Systems, Data Science, Machine Learning and Theoretical Computer Science.
             </p>
         </div>
     )
